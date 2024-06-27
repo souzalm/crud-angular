@@ -1,0 +1,127 @@
+@import '@angular/material/theming';
+
+// Inclui as funções de tema do Angular Material
+@include mat-core();
+
+// Define paletas de cores personalizadas
+$my-primary: mat-palette(
+  (
+    50: #e1f1fa,
+    100: #b3dcf2,
+    200: #80c5e8,
+    300: #4daedc,
+    400: #269cd3,
+    500: #0d5c8e,
+    600: #0b507a,
+    700: #094366,
+    800: #073652,
+    900: #05293e,
+    A100: #cde9ff,
+    A200: #9bd2ff,
+    A400: #69bbff,
+    A700: #36a4ff,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: black,
+      A200: black,
+      A400: black,
+      A700: black,
+    )
+  )
+);
+
+$my-accent: mat-palette(
+  (
+    50: #eef7e1,
+    100: #d7eab3,
+    200: #bddc80,
+    300: #a2cd4d,
+    400: #8ec326,
+    500: #62962f,
+    600: #558428,
+    700: #476f21,
+    800: #3a5a1a,
+    900: #2c4513,
+    A100: #e8ffd0,
+    A200: #d1ff9f,
+    A400: #baff6e,
+    A700: #a3ff3d,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: black,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: black,
+      A200: black,
+      A400: black,
+      A700: black,
+    )
+  )
+);
+
+$my-warn: mat-palette(
+  (
+    50: #fdf5e1,
+    100: #fbeab3,
+    200: #f8dc80,
+    300: #f5cd4d,
+    400: #f3c326,
+    500: #d7b823,
+    600: #c3a51f,
+    700: #af911b,
+    800: #9a7e17,
+    900: #866a13,
+    A100: #fff0b7,
+    A200: #ffe38f,
+    A400: #ffd667,
+    A700: #ffca3f,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: black,
+      500: black,
+      600: black,
+      700: black,
+      800: black,
+      900: black,
+      A100: black,
+      A200: black,
+      A400: black,
+      A700: black,
+    )
+  )
+);
+
+// Cria um tema com as paletas de cores personalizadas
+$dataprev-theme: mat-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+  )
+);
+
+// Inclui os estilos do tema personalizado no aplicativo
+@include angular-material-theme($dataprev-theme);
+
+
+
