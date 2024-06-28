@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatTableModule } from '@angular/material/table';
 
 import { LotacoesRoutingModule } from './lotacoes-routing.module';
 import { LotacoesComponent } from './lotacoes/lotacoes.component';
@@ -11,7 +12,8 @@ import { LotacoesComponent } from './lotacoes/lotacoes.component';
   ],
   imports: [
     CommonModule,
-    LotacoesRoutingModule
+    LotacoesRoutingModule,
+    MatTableModule
   ]
 })
 export class LotacoesModule { }

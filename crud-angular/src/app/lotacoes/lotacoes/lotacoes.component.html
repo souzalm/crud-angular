@@ -1,1 +1,115 @@
-<p>lotacoes works!</p>
+<table mat-table [dataSource]="lotacoes" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao._id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> Código </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.codigo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="sigla">
+    <th mat-header-cell *matHeaderCellDef> Sigla </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.sigla}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="descricao">
+    <th mat-header-cell *matHeaderCellDef> Descrição </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.descricao}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idResponsavel">
+    <th mat-header-cell *matHeaderCellDef> Id Responsável </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.idResponsavel}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idSubstitutoResponsavel">
+    <th mat-header-cell *matHeaderCellDef> Id Substituto Responsável </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.idSubstitutoResponsavel}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dataInicial">
+    <th mat-header-cell *matHeaderCellDef> Data Inicial </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.dataInicial}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dataFinal">
+    <th mat-header-cell *matHeaderCellDef> Data Final </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.dataFinal}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idPai">
+    <th mat-header-cell *matHeaderCellDef> Id Pai </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.idPai}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="codigoPai">
+    <th mat-header-cell *matHeaderCellDef> Código Pai </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.codigoPai}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="siglaPai">
+    <th mat-header-cell *matHeaderCellDef> Sigla Pai </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.siglaPai}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="descricaoPai">
+    <th mat-header-cell *matHeaderCellDef> Descrição Pai </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.descricaoPai}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="telefone">
+    <th mat-header-cell *matHeaderCellDef> Telefone </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.telefone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="endereco">
+    <th mat-header-cell *matHeaderCellDef> Endereço </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.endereco}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cep">
+    <th mat-header-cell *matHeaderCellDef> CEP </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.cep}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="numero">
+    <th mat-header-cell *matHeaderCellDef> Número </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.numero}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="bairro">
+    <th mat-header-cell *matHeaderCellDef> Bairro </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.bairro}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="municipio">
+    <th mat-header-cell *matHeaderCellDef> Município </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.municipio}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="uf">
+    <th mat-header-cell *matHeaderCellDef> UF </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.uf}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="codigoCnae">
+    <th mat-header-cell *matHeaderCellDef> Codigo CNAE </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.codigoCnae}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="logradouro">
+    <th mat-header-cell *matHeaderCellDef> Logradouro </th>
+    <td mat-cell *matCellDef="let lotacao"> {{lotacao.logradouro}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
